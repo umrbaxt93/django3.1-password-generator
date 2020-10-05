@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container text-center">
+    <div class="p-3 mb-2 bg-secondary text-white">
+
+        <h2>Ixtiyoriy Parol yaratish</h2>
+        <form action="{% url 'password' %}">
+            <select name="length" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected="'selected">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+            </select> Length
+            <br>
+            <input type="checkbox" name="uppercase"> Katta harflar
+            <br>
+            <input type="checkbox" name="number"> Raqamlar
+            <br>
+            <input type="checkbox" name="symbols">Belgilar
+            <br>
+            <input type="submit",value="Generate pasword" class="btn btn-primary">
+
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
